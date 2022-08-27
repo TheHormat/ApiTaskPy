@@ -1,0 +1,59 @@
+#btn-next{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+}
+
+#btn-previous{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgb(204, 197, 197);
+    margin: 30px;
+}
+
+#btn-previous a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+#btn-active{
+    background-color: rgb(127, 13, 235);
+    color: white;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    border: none; 
+}
+
+#btn{
+    background-color: rgb(191, 173, 206);
+    color: white;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    border: none;  
+}
+
+.wrapper{ 
+    display: flex;
+    justify-content: space-between;
+}
+
+.form{
+    margin: 30px;
+    width: 90%;
+}
+
+.twopage{
+    width: 30%;
+    margin: 80px;
+}
+
+.twopage ul li {
+    display: flex;
+    padding: 20px;
+}

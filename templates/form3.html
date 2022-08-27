@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>TASK</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="onepage">
+            <h1 style="margin: 30px;">Qiymət təklifi yarat</h1>
+            <form class="form"  method=POST>
+                {% csrf_token %}
+          
+                <div class="input_group">
+                  <div class="input_box">
+                    <p>{{ form.payment_terms.label }}</p>
+                    {{ form.payment_terms }}
+                  </div><br>
+                  <div class="input_box">
+                    <p>{{ form.bank_account.label }} <br></p>
+                    {{ form.bank_account }}
+                  </div><br>
+
+                  <div class="input_box">
+                    <p>{{ form.discount.label }}</p>
+                    {{ form.discount }}
+                  </div><br>
+
+                </div>
+                <br><br>
+                <button id="btn-previous"><a href="{% url 'form2' %}?form_id={{request.GET.form_id}}">Əvvəlki addım</a></button>
+                <input id="btn-next" type="submit" value="Növbəti addım">
+
+              </form>
+
+    
+        </div>
+    
+        
+        <div class="twopage">
+            <ul>
+                <li>
+                    <button id="btn-active">1</button>
+                    <p style="font-weight: 800;">Ümumi məlumatlar</p>
+                </li>
+                <li>
+                    <button id="btn-active">2</button>
+                    <p style="font-weight: 800;">Məhsullara dair məlumatlar</p>
+                </li>
+                <li>
+                    <button id="btn-active">3</button>
+                    <p style="font-weight: 800;">Ödəniş məlumatlar</p>
+                </li>
+                <li>
+                    <button id="btn">4</button>
+                    <p style="font-weight: 400;">Çatdırılma məlumatlar</p>
+                </li>
+                <li>
+                    <button id="btn">5</button>
+                    <p style="font-weight: 400;">Önbaxış</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+
+    
+</body>
+</html>
